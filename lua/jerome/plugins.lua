@@ -45,13 +45,17 @@ local plugins = {
 	{'saadparwaiz1/cmp_luasnip'},
 	{ "rafamadriz/friendly-snippets" },
 
-
-
 	{
 		'windwp/nvim-autopairs',
 		event = "InsertEnter",
 		opts = {} -- this is equalent to setup({}) function
-	}
+	},
+
+	--nvim tree (+ icons for the latter)
+	{'nvim-tree/nvim-web-devicons'},
+	{'nvim-tree/nvim-tree.lua'}
+
+
 }
 
 local opts = {}
