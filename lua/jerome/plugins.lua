@@ -18,26 +18,42 @@ local plugins = {
 	-- or                              , branch = '0.1.x',
       	dependencies = { 'nvim-lua/plenary.nvim' }
     },
-
+	
+	--colorschemes
     { 'rose-pine/neovim', name = 'rose-pine' },
+	{'sainnhe/gruvbox-material', name="gruvbox-material"},
 
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
-    --- Uncomment these if you want to manage LSP servers from neovim
-    -- {'williamboman/mason.nvim'},
-    -- {'williamboman/mason-lspconfig.nvim'},
+	-- lsp 
+    {"williamboman/mason.nvim"},
+    {"williamboman/mason-lspconfig.nvim"},
 
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
-    
-    {"williamboman/mason.nvim"},
-    {"williamboman/mason-lspconfig.nvim"},
-    {"neovim/nvim-lspconfig"}
+	--others cmp
+	{'hrsh7th/cmp-path'},
+	{'hrsh7th/cmp-buffer'},
+	{'hrsh7th/cmp-cmdline'},
+	--for luasnip
+    {
+		'L3MON4D3/LuaSnip',
+		build = "make install_jsregexp"
+	},
+	{'saadparwaiz1/cmp_luasnip'},
+	{ "rafamadriz/friendly-snippets" },
+
+
+
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		opts = {} -- this is equalent to setup({}) function
+	}
 }
-	
+
 local opts = {}
 
 
