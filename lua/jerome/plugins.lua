@@ -18,10 +18,11 @@ local plugins = {
 	-- or                              , branch = '0.1.x',
       	dependencies = { 'nvim-lua/plenary.nvim' }
     },
-	
+
 	--colorschemes
     { 'rose-pine/neovim', name = 'rose-pine' },
 	{'sainnhe/gruvbox-material', name="gruvbox-material"},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 

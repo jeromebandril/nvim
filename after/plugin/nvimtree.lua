@@ -25,6 +25,7 @@ require("nvim-tree").setup({
 
 
 -- autoclose 
+--[=====[ 
 local function is_modified_buffer_open(buffers)
     for _, v in pairs(buffers) do
         if v.name:match("NvimTree_") == nil then
@@ -46,3 +47,4 @@ vim.api.nvim_create_autocmd("BufEnter", {
         end
     end,
 })
+--]=====]
